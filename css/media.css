@@ -1,0 +1,62 @@
+/* small screen */
+@media screen and (min-width: 576px) {
+    #about {
+        padding-inline: 2.25rem;
+    }
+
+    #achievements {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/*Medium Screen*/
+@media screen and (min-width: 768px) {
+    .b-shadow {
+        padding: 4rem 3rem;
+    }
+
+    .fs-md-72 {
+        font-size: 4.5rem;
+    }
+
+    .fs-md-40 {
+        font-size: 2.5rem;
+    }
+
+    .typed-cursor {
+        font-size: 2.5rem;
+    }
+    #about {
+        padding-inline: 0;
+    }
+
+    .w-md-100 {
+        width: 100%;
+    }
+    .my-nav .navbar-brand{
+    margin-left: -12px;
+}
+
+}
+
+/*large Screen*/
+@media screen and (min-width: 992px) {
+    /*bg image header attachment fixed*/
+    #header {
+        background-attachment: fixed;
+    }
+
+    /*bg image achievements attachment fixed*/
+    #achievements {
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #contact {
+        background-attachment: fixed;
+    }
+}
+/*xlarge Screen*/
+@media screen and (min-width: 1200px) {
+}

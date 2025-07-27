@@ -34,10 +34,9 @@
     .w-md-100 {
         width: 100%;
     }
-    .my-nav .navbar-brand{
-    margin-left: -12px;
-}
-
+    .my-nav .navbar-brand {
+        margin-left: -12px;
+    }
 }
 
 /*large Screen*/
@@ -55,6 +54,15 @@
 
     #contact {
         background-attachment: fixed;
+    }
+
+    .my-nav
+        .navbar-nav
+        .dropdown
+        .dropdown-menu
+        ul.dropdown-menu.dropdown-submenu {
+        right: 100%;
+        top: 30px;
     }
 }
 /*x large Screen*/

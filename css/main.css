@@ -182,8 +182,8 @@ a {
 .my-nav .navbar-nav .dropdown .dropdown-menu ul.dropdown-menu.dropdown-submenu {
     display: none;
     position: absolute;
-    right: 100%;
-    top: 30px;
+    right: 15%;
+    top: 20%;
 }
 
 .my-nav
@@ -201,34 +201,6 @@ a {
         url(../images/hero-bg.jpg);
     background-size: cover;
     background-position: center center;
-}
-
-/* loading-indcator */
-#loading-indcator {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    border: 0.5rem solid gray;
-    border-top-color: var(--main-color);
-    animation: load 1s infinite linear;
-}
-
-/* Animation Loading indcator */
-@keyframes load {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 /*=====================Style About=================*/
@@ -469,6 +441,6 @@ a {
     width: 90%;
 }
 
-.navbar-nav .nav-link.active::after{
+.navbar-nav .nav-link.active::after {
     width: 90%;
 }

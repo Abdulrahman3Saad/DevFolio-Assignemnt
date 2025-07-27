@@ -6,21 +6,6 @@ var typed = new Typed("#typed-text", {
     backDelay: 2000,
 });
 
-// show loading indicator and hidden body
-document.onreadystatechange = function () {
-    if (document.readyState !== "complete") {
-        document.body.classList.add("loading");
-        document.getElementById("loading-indcator").style.visibility = "visible";
-    } else {
-        setTimeout(() => {
-            document.getElementById("loading-indcator").style.display = "none";
-            document.body.classList.remove("loading");
-            document.body.classList.add("loaded");
-            bootstrap.ScrollSpy.getInstance(document.body)?.refresh();
-        }, 100); 
-    }
-};
-
 
 // Scroll Top
 

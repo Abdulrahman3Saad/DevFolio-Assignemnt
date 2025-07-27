@@ -195,7 +195,35 @@ a {
     display: block;
 }
 
-/* ==========================End Navbar style ========================== */
+.my-nav .navbar-nav .nav-link {
+    position: relative;
+    color: var(--color-white) !important;
+}
+
+.my-nav .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-white);
+    transition: all 0.3s;
+}
+
+.my-nav .navbar-nav .nav-link:hover::after {
+    width: 90%;
+}
+
+.my-nav .navbar-nav .nav-link.active::after {
+    width: 90%;
+}
+
+.my-nav .dropdown-toggle::after {
+    display: none;
+}
+
+    /* ==========================End Navbar style ========================== */
 #header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(../images/hero-bg.jpg);
@@ -311,6 +339,25 @@ a {
 
 /*=====================Style portfolio End =================*/
 
+/*=====================Style Slider =================*/
+#slider {
+    background-image: linear-gradient(var(--bg-layer), var(--bg-layer)),
+        url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 85vh;
+}
+
+#slider .carousel .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+#slider .carousel .carousel-indicators {
+}
+/*=====================Style Slider End =================*/
+
 /*=====================Style blog  =================*/
 #blog .cards .card-item .inner .card-category {
     padding: 6px 15px;
@@ -419,28 +466,4 @@ a {
     border: none;
     --bs-btn-padding-x: 0;
     --bs-btn-padding-y-: 0;
-}
-
-.navbar-nav .nav-link {
-    position: relative;
-    color: var(--color-white) !important;
-}
-
-.navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--color-white);
-    transition: all 0.3s;
-}
-
-.navbar-nav .nav-link:hover::after {
-    width: 90%;
-}
-
-.navbar-nav .nav-link.active::after {
-    width: 90%;
 }

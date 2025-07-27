@@ -9,6 +9,7 @@
     --bg-layer: rgba(0, 102, 255, 0.7);
     --layer: rgb(0, 120, 255, 0.7);
     --font-size-lg: 2rem;
+    scroll-padding-top: 3.75rem;
 }
 
 .fs-11 {
@@ -163,8 +164,6 @@ a {
     margin-left: 1.875rem;
 }
 
-
-
 .my-nav .dropdown:hover > .dropdown-menu {
     display: block;
 }
@@ -177,11 +176,8 @@ a {
     --bs-dropdown-link-hover-color: var(--main-color);
     padding: 0.625rem 1.25rem;
     transition: all 0.5s;
-    --bs-dropdown-link-active-bg: var(--color-white);
-    --bs-dropdown-link-active-color: var(--main-color);
     --bs-dropdown-link-hover-bg: var(--color-white);
 }
-
 
 .my-nav .navbar-nav .dropdown .dropdown-menu ul.dropdown-menu.dropdown-submenu {
     display: none;
@@ -190,20 +186,15 @@ a {
     top: 30px;
 }
 
-.my-nav .navbar-nav .dropdown .dropdown-menu li:hover ul.dropdown-menu.dropdown-submenu {
-    display:block;
+.my-nav
+    .navbar-nav
+    .dropdown
+    .dropdown-menu
+    li:hover
+    ul.dropdown-menu.dropdown-submenu {
+    display: block;
 }
 
-
-
-
-/* Multi dropdown */
-
-
-
-/* .dropdown-menu .dropdown-submenu{
-    
-} */
 /* ==========================End Navbar style ========================== */
 #header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -456,4 +447,28 @@ a {
     border: none;
     --bs-btn-padding-x: 0;
     --bs-btn-padding-y-: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: var(--color-white) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-white);
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 90%;
+}
+
+.navbar-nav .nav-link.active::after{
+    width: 90%;
 }

@@ -9,16 +9,18 @@ var typed = new Typed("#typed-text", {
 // show loading indicator and hidden body
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
-        document.querySelector("body").style.visibility = "hidden";
-        document.getElementById("loading-indcator").style.visibility =
-            "visible";
+        document.body.classList.add("loading");
+        document.getElementById("loading-indcator").style.visibility = "visible";
     } else {
         setTimeout(() => {
             document.getElementById("loading-indcator").style.display = "none";
-            document.querySelector("body").style.visibility = "visible";
-        });
+            document.body.classList.remove("loading");
+            document.body.classList.add("loaded");
+            bootstrap.ScrollSpy.getInstance(document.body)?.refresh();
+        }, 100); 
     }
 };
+
 
 // Scroll Top
 
